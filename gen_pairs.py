@@ -162,6 +162,27 @@ CONCEPT_DEFS: dict[str, dict] = {
             "contract negotiation deadlines", "political campaign timing",
         ],
     },
+    "plurality": {
+        "desc": "plurality vs. singularity — multiple entities vs. one",
+        "pos_label": "plural context: multiple distinct entities, groups, collections, or instances "
+                     "acting together or being described collectively; uses plural grammar naturally",
+        "neg_label": "singular context: one individual entity, person, object, or instance acting "
+                     "alone or being described in isolation; uses singular grammar naturally",
+        "domains": [
+            "scientific research teams vs. solo researcher",
+            "committee decisions vs. individual rulings",
+            "species and populations vs. single organism",
+            "corporate entities and partnerships vs. sole proprietor",
+            "social movements and collectives vs. individual actor",
+            "product lines and catalogues vs. single item",
+            "multi-country treaties vs. bilateral agreement",
+            "ensemble casts vs. solo performer",
+            "ecosystems and communities vs. single specimen",
+            "database records and datasets vs. single entry",
+            "fleets and networks vs. individual unit",
+            "legislative bodies vs. single legislator",
+        ],
+    },
 }
 
 SPARSE_CONCEPTS = list(CONCEPT_DEFS.keys())
@@ -385,6 +406,14 @@ def run_concept(concept: str, target: int, models: list[str], dry_run: bool = Fa
 
     remaining_planned = [t for t in planned if t not in completed]
     still_needed = needed - len(completed)
+
+    # Stale checkpoint from a previous completed run: reset so we start fresh.
+    if still_needed <= 0 and needed > 0:
+        ckpt = {"completed_topics": [], "planned_topics": []}
+        save_checkpoint(concept, ckpt)
+        completed = set()
+        remaining_planned = []
+        still_needed = needed
 
     if dry_run:
         n_to_brainstorm = max(0, still_needed - len(remaining_planned))

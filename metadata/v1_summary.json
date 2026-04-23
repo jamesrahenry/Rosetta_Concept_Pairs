@@ -20,11 +20,11 @@
       "o4-mini"
     ],
     "topics": 151,
-    "file_size_kb": 3691
+    "file_size_kb": 3691.0
   },
   "authorization": {
-    "records": 490,
-    "pair_ids": 20,
+    "records": 2006,
+    "pair_ids": 107,
     "models": 14,
     "model_list": [
       "claude-3-7-sonnet",
@@ -42,8 +42,8 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 20,
-    "file_size_kb": 657
+    "topics": 107,
+    "file_size_kb": 3990.0
   },
   "causation": {
     "records": 2868,
@@ -66,7 +66,7 @@
       "o4-mini"
     ],
     "topics": 165,
-    "file_size_kb": 4109
+    "file_size_kb": 4109.0
   },
   "certainty": {
     "records": 2814,
@@ -89,7 +89,7 @@
       "o4-mini"
     ],
     "topics": 164,
-    "file_size_kb": 4154
+    "file_size_kb": 4154.0
   },
   "credibility": {
     "records": 2830,
@@ -112,7 +112,7 @@
       "o4-mini"
     ],
     "topics": 161,
-    "file_size_kb": 4034
+    "file_size_kb": 4034.0
   },
   "deception": {
     "records": 2830,
@@ -135,11 +135,11 @@
       "o4-mini"
     ],
     "topics": 160,
-    "file_size_kb": 3803
+    "file_size_kb": 3803.0
   },
   "exfiltration": {
-    "records": 484,
-    "pair_ids": 20,
+    "records": 1938,
+    "pair_ids": 107,
     "models": 14,
     "model_list": [
       "claude-3-7-sonnet",
@@ -157,8 +157,8 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 20,
-    "file_size_kb": 662
+    "topics": 107,
+    "file_size_kb": 4239.0
   },
   "formality": {
     "records": 2770,
@@ -181,7 +181,7 @@
       "o4-mini"
     ],
     "topics": 161,
-    "file_size_kb": 3903
+    "file_size_kb": 3903.0
   },
   "moral_valence": {
     "records": 2820,
@@ -204,7 +204,7 @@
       "o4-mini"
     ],
     "topics": 165,
-    "file_size_kb": 4186
+    "file_size_kb": 4186.0
   },
   "negation": {
     "records": 2644,
@@ -227,7 +227,7 @@
       "o4-mini"
     ],
     "topics": 150,
-    "file_size_kb": 3726
+    "file_size_kb": 3726.0
   },
   "obfuscation": {
     "records": 446,
@@ -250,11 +250,11 @@
       "o4-mini"
     ],
     "topics": 20,
-    "file_size_kb": 583
+    "file_size_kb": 583.0
   },
   "plurality": {
-    "records": 2826,
-    "pair_ids": 106,
+    "records": 2842,
+    "pair_ids": 107,
     "models": 14,
     "model_list": [
       "claude-3-7-sonnet",
@@ -272,8 +272,8 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 156,
-    "file_size_kb": 4113
+    "topics": 157,
+    "file_size_kb": 4155.0
   },
   "sarcasm": {
     "records": 2806,
@@ -296,7 +296,7 @@
       "o4-mini"
     ],
     "topics": 154,
-    "file_size_kb": 3788
+    "file_size_kb": 3788.0
   },
   "sentiment": {
     "records": 2884,
@@ -319,7 +319,7 @@
       "o4-mini"
     ],
     "topics": 107,
-    "file_size_kb": 4022
+    "file_size_kb": 4022.0
   },
   "specificity": {
     "records": 2778,
@@ -342,7 +342,7 @@
       "o4-mini"
     ],
     "topics": 167,
-    "file_size_kb": 3727
+    "file_size_kb": 3727.0
   },
   "temporal_order": {
     "records": 2858,
@@ -365,11 +365,11 @@
       "o4-mini"
     ],
     "topics": 161,
-    "file_size_kb": 4050
+    "file_size_kb": 4050.0
   },
   "threat_severity": {
-    "records": 462,
-    "pair_ids": 20,
+    "records": 1700,
+    "pair_ids": 107,
     "models": 14,
     "model_list": [
       "claude-3-7-sonnet",
@@ -387,12 +387,12 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 20,
-    "file_size_kb": 657
+    "topics": 107,
+    "file_size_kb": 3646.0
   },
   "urgency": {
-    "records": 482,
-    "pair_ids": 20,
+    "records": 1950,
+    "pair_ids": 107,
     "models": 14,
     "model_list": [
       "claude-3-7-sonnet",
@@ -410,7 +410,7 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 20,
-    "file_size_kb": 639
+    "topics": 107,
+    "file_size_kb": 3474.0
   }
 }

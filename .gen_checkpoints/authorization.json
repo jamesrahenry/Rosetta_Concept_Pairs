@@ -1,0 +1,20 @@
+{
+  "completed_topics": [
+    "GCP service account impersonation limited by IAM conditions",
+    "Server cabinet RFID badge access with scheduled rack permissions",
+    "Hardware security module key usage requiring dual approval for export",
+    "OIDC trust for CI/CD provider restricted to specific repo and branch",
+    "Pre-signed object storage URL with short expiry and IP restriction",
+    "OAuth device authorization flow with one-time user code binding",
+    "Database row-level security enforcing tenant isolation"
+  ],
+  "planned_topics": [
+    "Server cabinet RFID badge access with scheduled rack permissions",
+    "Pre-signed object storage URL with short expiry and IP restriction",
+    "GCP service account impersonation limited by IAM conditions",
+    "Database row-level security enforcing tenant isolation",
+    "OAuth device authorization flow with one-time user code binding",
+    "OIDC trust for CI/CD provider restricted to specific repo and branch",
+    "Hardware security module key usage requiring dual approval for export"
+  ]
+}

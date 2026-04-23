@@ -1,0 +1,20 @@
+{
+  "completed_topics": [
+    "SIEM triage: sudden high-volume data transfer to rare external host from production DB",
+    "Red team: persistent root implant discovered on critical CI build server",
+    "CVE advisory: CVSS 9.8 remote flaw in popular LDAP server with exploit reported",
+    "Threat intelligence: active exploit campaign targeting container registry API",
+    "Security audit: hidden SSH backdoor in networked CCTV firmware granting root",
+    "Bug bounty: unauthenticated image upload enabling RCE in avatar thumbnail service",
+    "Penetration test: stolen Kerberos tickets leveraged for domain admin takeover"
+  ],
+  "planned_topics": [
+    "Bug bounty: unauthenticated image upload enabling RCE in avatar thumbnail service",
+    "Security audit: hidden SSH backdoor in networked CCTV firmware granting root",
+    "SIEM triage: sudden high-volume data transfer to rare external host from production DB",
+    "Threat intelligence: active exploit campaign targeting container registry API",
+    "Penetration test: stolen Kerberos tickets leveraged for domain admin takeover",
+    "Red team: persistent root implant discovered on critical CI build server",
+    "CVE advisory: CVSS 9.8 remote flaw in popular LDAP server with exploit reported"
+  ]
+}

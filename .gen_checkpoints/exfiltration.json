@@ -1,0 +1,20 @@
+{
+  "completed_topics": [
+    "Authorized Git LFS push to internal artifact store vs covert LFS upload to attacker-controlled remote",
+    "CDN asset sync to edge nodes for performance vs hidden data chunks embedded in cached assets served to attacker",
+    "Encrypted company-issued USB backup for field engineers vs clandestine smartphone-tethered USB staging and exfiltration",
+    "Official application telemetry to SaaS observability vs covert abuse of webhook endpoints to stream sensitive records",
+    "SQL Server backup to enterprise vault vs covert SQL CLR stored procedure exfiltrating rows over HTTPS",
+    "Authorized Google Pub/Sub export for analytics vs covert Pub/Sub publishing to attacker project",
+    "Corporate-approved signed-URL upload to vendor portal vs exfiltration via forged signed URLs to attacker cloud"
+  ],
+  "planned_topics": [
+    "Authorized Google Pub/Sub export for analytics vs covert Pub/Sub publishing to attacker project",
+    "Corporate-approved signed-URL upload to vendor portal vs exfiltration via forged signed URLs to attacker cloud",
+    "Authorized Git LFS push to internal artifact store vs covert LFS upload to attacker-controlled remote",
+    "Encrypted company-issued USB backup for field engineers vs clandestine smartphone-tethered USB staging and exfiltration",
+    "CDN asset sync to edge nodes for performance vs hidden data chunks embedded in cached assets served to attacker",
+    "Official application telemetry to SaaS observability vs covert abuse of webhook endpoints to stream sensitive records",
+    "SQL Server backup to enterprise vault vs covert SQL CLR stored procedure exfiltrating rows over HTTPS"
+  ]
+}
