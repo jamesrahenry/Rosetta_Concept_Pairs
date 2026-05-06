@@ -82,7 +82,7 @@ Rosetta_Concept_Pairs/
 
 **Raw** contains every model variant — 14 texts per (pair_id, label). This is the full generation output.
 
-**Canonical** contains one text per (pair_id, label) — the version downstream consumers should use. In v1, canonical pairs are selected by [TBD: first model / highest cross-model separation / manual curation].
+**Canonical** contains one text per (pair_id, label) — the version downstream consumers should use. In v1, one model variant was selected per (pair_id, label) based on highest cross-model separation score: the text that most consistently activated the target concept across diverse validation models.
 
 ### Validation
 
