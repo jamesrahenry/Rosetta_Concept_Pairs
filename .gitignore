@@ -18,3 +18,4 @@ Thumbs.db
 *.pt
 *.safetensors
 *.bin
+.gen_checkpoints/
