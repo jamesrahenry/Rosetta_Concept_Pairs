@@ -4,30 +4,30 @@ Contrastive text pairs for mechanistic interpretability research. Each pair cons
 
 ## What's in the dataset (v1.0.0)
 
-**18 concepts**, **1,839 unique pair IDs**, **14 model variants per pair topic** = **44,546 total records**.
+**18 concepts**, **1,839 unique pair IDs**, **14 model variants per pair topic** = **42,616 total records**.
 
-Each pair topic was independently written by 14 diverse language models (Claude, GPT, Gemini, Kimi, Mistral, o4-mini). The models were given identical generation prompts but produced their own text — the "consensus" is in the concept labeling, not the wording. Each (pair_id, model) combination is treated as a distinct pair, giving ~1,400 usable pairs per concept.
+Each pair topic was independently written by 14 diverse language models (Claude, GPT, Gemini, Kimi, Mistral, o4-mini). The models were given identical generation prompts but produced their own text — the "consensus" is in the concept labeling, not the wording. Each (pair_id, model) combination is treated as a distinct pair, giving ~1,300 usable pairs per concept. Every `pair_id` now maps to exactly one topic across all its model variants (see [Changelog](#changelog)).
 
-| Concept | Pair IDs | Pairs | Topics | Domain | CAZ use |
-|---|---|---|---|---|---|
-| `agency` | 107 | ~1,381 | 151 | General | ✓ |
-| `authorization` | 107 | ~1,003 | 107 | Security | ✓ |
-| `causation` | 107 | ~1,434 | 165 | General | ✓ |
-| `certainty` | 107 | ~1,407 | 164 | General | ✓ |
-| `credibility` | 107 | ~1,415 | 161 | General | ✓ |
-| `deception` | 107 | ~1,415 | 160 | Security | ✓ |
-| `exfiltration` | 107 | ~969 | 107 | Security | ✓ |
-| `formality` | 107 | ~1,385 | 161 | General | ✓ |
-| `moral_valence` | 107 | ~1,410 | 165 | General | ✓ |
-| `negation` | 107 | ~1,322 | 150 | General | ✓ |
-| `obfuscation` | 20 | ~223 | 20 | Security | CIA only¹ |
-| `plurality` | 107 | ~1,421 | 157 | General | ✓ |
-| `sarcasm` | 107 | ~1,403 | 154 | General | ✓ |
-| `sentiment` | 107 | ~1,442 | 107 | General | ✓ |
-| `specificity` | 107 | ~1,389 | 167 | General | ✓ |
-| `temporal_order` | 107 | ~1,429 | 161 | General | ✓ |
-| `threat_severity` | 107 | ~850 | 107 | Security | ✓ |
-| `urgency` | 107 | ~975 | 107 | Security | ✓ |
+| Concept | Pair IDs | Pairs | Domain | CAZ use |
+|---|---|---|---|---|
+| `agency` | 107 | ~1,323 | General | ✓ |
+| `authorization` | 107 | ~1,001 | Security | ✓ |
+| `causation` | 107 | ~1,352 | General | ✓ |
+| `certainty` | 107 | ~1,330 | General | ✓ |
+| `credibility` | 107 | ~1,331 | General | ✓ |
+| `deception` | 107 | ~1,337 | Security | ✓ |
+| `exfiltration` | 107 | ~962 | Security | ✓ |
+| `formality` | 107 | ~1,305 | General | ✓ |
+| `moral_valence` | 107 | ~1,312 | General | ✓ |
+| `negation` | 107 | ~1,257 | General | ✓ |
+| `obfuscation` | 20 | ~223 | Security | CIA only¹ |
+| `plurality` | 107 | ~1,346 | General | ✓ |
+| `sarcasm` | 107 | ~1,333 | General | ✓ |
+| `sentiment` | 107 | ~1,442 | General | ✓ |
+| `specificity` | 107 | ~1,305 | General | ✓ |
+| `temporal_order` | 107 | ~1,345 | General | ✓ |
+| `threat_severity` | 107 | ~847 | Security | ✓ |
+| `urgency` | 107 | ~957 | Security | ✓ |
 
 **Pair IDs** = unique base topics. **Pairs** ≈ pair_ids × model variants actually present (not all models wrote all topics, hence ~). Pair counts are from `metadata/v1_summary.json`.
 
@@ -64,6 +64,19 @@ Each JSONL record represents one model's text for one side of one pair:
 | `concept` | string | The target concept this pair contrasts on |
 
 When consumed via `rosetta_tools`, each (pair_id, model_name) is assigned a composite key `pair_id__model_name` and treated as an independent pair. Additional fields may appear and are captured as `metadata`.
+
+### Label convention
+
+`label=1` always means **the text expresses the named concept**; `label=0` means it doesn't. This is consistent across all 18 concepts — but it is *not* the same as "1 = the nice/desirable text." For concepts named after an undesirable behavior, label=1 is the undesirable one:
+
+| Concept | `label=1` text | `label=0` text |
+|---|---|---|
+| `deception` | deceptive / misleading | honest / transparent |
+| `exfiltration` | covert, unauthorized transfer | authorized, controlled transfer |
+| `threat_severity` | critical / high severity | low severity / informational |
+| `urgency` | genuine urgency | no urgency |
+
+All other concepts read the "expected" way (e.g. `sentiment` 1=positive, `moral_valence` 1=virtuous, `credibility` 1=credible). When writing code that branches on `label`, treat it as "concept present," never assume it means "the good one."
 
 ## Directory structure
 
@@ -128,6 +141,15 @@ Validation scores are in `validation/scores/`.
 ## Versioning
 
 **v1.0.0** (git tag): 18 concepts, 1,839 unique pair IDs, 44,546 records. Security concepts (authorization, exfiltration, threat_severity, urgency) topped up to 107 pair IDs in this release.
+
+## Changelog
+
+Post-v1.0.0 data-quality pass (unreleased, no new tag):
+
+- **exfiltration label direction**: corrected 87/107 topics where `label=1`/`label=0` had been swapped (benign transfer under label=1 instead of the malicious one). Fixed in both the data and `gen_pairs.py`'s generation prompt so future top-ups don't reintroduce it.
+- **Empty/placeholder records removed**: 68 records across `authorization`, `causation`, `deception`, `exfiltration`, `moral_valence`, `specificity`, `threat_severity`, `urgency` — failed generations that landed as empty strings, literal `"..."` placeholders, or leaked meta-commentary (e.g. "Text B describes..."). Both sides of the affected `(pair_id, model_name)` were dropped to keep every pair complete.
+- **Stray-topic records removed**: 1,862 records across 12 "General"-domain concepts (`agency`, `causation`, `certainty`, `credibility`, `deception`, `formality`, `moral_valence`, `negation`, `plurality`, `sarcasm`, `specificity`, `temporal_order`) where a minority of model variants (typically 1–3 of 14) had drifted onto a different topic than the rest while sharing the same `pair_id`. Kept only the majority-topic variants; every `pair_id` now maps to exactly one topic across all its models.
+- No `pair_id` was dropped entirely, so `metadata/v1_validation_split.json` is unchanged. `metadata/v1_summary.json` was regenerated. Net: 44,546 → 42,616 records (1,839 pair IDs unchanged).
 
 ## License
 

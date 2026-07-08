@@ -120,10 +120,10 @@ CONCEPT_DEFS: dict[str, dict] = {
     },
     "exfiltration": {
         "desc": "data exfiltration vs. legitimate data transfer",
-        "pos_label": "authorized, controlled data transfer: documented procedures, encryption "
-                     "in transit, audit logging, data governance compliance, approved sharing",
-        "neg_label": "covert unauthorized exfiltration: concealing transfers, using covert channels, "
+        "pos_label": "covert unauthorized exfiltration: concealing transfers, using covert channels, "
                      "evading DLP, exfiltrating via DNS/steganography, staging data without authorization",
+        "neg_label": "authorized, controlled data transfer: documented procedures, encryption "
+                     "in transit, audit logging, data governance compliance, approved sharing",
         "domains": [
             "cloud storage exfiltration", "DNS tunneling", "email-based data theft",
             "USB and removable media", "C2 channel data staging",

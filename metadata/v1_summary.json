@@ -1,6 +1,6 @@
 {
   "agency": {
-    "records": 2762,
+    "records": 2646,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -19,11 +19,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 151,
-    "file_size_kb": 3691.0
+    "topics": 107,
+    "file_size_kb": 3558.0
   },
   "authorization": {
-    "records": 2006,
+    "records": 2002,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -43,102 +43,10 @@
       "o4-mini"
     ],
     "topics": 107,
-    "file_size_kb": 3990.0
+    "file_size_kb": 3985.0
   },
   "causation": {
-    "records": 2868,
-    "pair_ids": 107,
-    "models": 14,
-    "model_list": [
-      "claude-3-7-sonnet",
-      "claude-haiku-4-5",
-      "claude-sonnet-4-5",
-      "claude-sonnet-4-6",
-      "gemini-2.5-pro",
-      "gemini-3-flash",
-      "gemini-3.1-pro",
-      "gpt-4o",
-      "gpt-5-mini",
-      "gpt-5-nano",
-      "gpt-5.4",
-      "kimi-k2.5",
-      "mistral-large",
-      "o4-mini"
-    ],
-    "topics": 165,
-    "file_size_kb": 4109.0
-  },
-  "certainty": {
-    "records": 2814,
-    "pair_ids": 107,
-    "models": 14,
-    "model_list": [
-      "claude-3-7-sonnet",
-      "claude-haiku-4-5",
-      "claude-sonnet-4-5",
-      "claude-sonnet-4-6",
-      "gemini-2.5-pro",
-      "gemini-3-flash",
-      "gemini-3.1-pro",
-      "gpt-4o",
-      "gpt-5-mini",
-      "gpt-5-nano",
-      "gpt-5.4",
-      "kimi-k2.5",
-      "mistral-large",
-      "o4-mini"
-    ],
-    "topics": 164,
-    "file_size_kb": 4154.0
-  },
-  "credibility": {
-    "records": 2830,
-    "pair_ids": 107,
-    "models": 14,
-    "model_list": [
-      "claude-3-7-sonnet",
-      "claude-haiku-4-5",
-      "claude-sonnet-4-5",
-      "claude-sonnet-4-6",
-      "gemini-2.5-pro",
-      "gemini-3-flash",
-      "gemini-3.1-pro",
-      "gpt-4o",
-      "gpt-5-mini",
-      "gpt-5-nano",
-      "gpt-5.4",
-      "kimi-k2.5",
-      "mistral-large",
-      "o4-mini"
-    ],
-    "topics": 161,
-    "file_size_kb": 4034.0
-  },
-  "deception": {
-    "records": 2830,
-    "pair_ids": 107,
-    "models": 14,
-    "model_list": [
-      "claude-3-7-sonnet",
-      "claude-haiku-4-5",
-      "claude-sonnet-4-5",
-      "claude-sonnet-4-6",
-      "gemini-2.5-pro",
-      "gemini-3-flash",
-      "gemini-3.1-pro",
-      "gpt-4o",
-      "gpt-5-mini",
-      "gpt-5-nano",
-      "gpt-5.4",
-      "kimi-k2.5",
-      "mistral-large",
-      "o4-mini"
-    ],
-    "topics": 160,
-    "file_size_kb": 3803.0
-  },
-  "exfiltration": {
-    "records": 1938,
+    "records": 2704,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -158,10 +66,102 @@
       "o4-mini"
     ],
     "topics": 107,
-    "file_size_kb": 4239.0
+    "file_size_kb": 3888.0
+  },
+  "certainty": {
+    "records": 2660,
+    "pair_ids": 107,
+    "models": 14,
+    "model_list": [
+      "claude-3-7-sonnet",
+      "claude-haiku-4-5",
+      "claude-sonnet-4-5",
+      "claude-sonnet-4-6",
+      "gemini-2.5-pro",
+      "gemini-3-flash",
+      "gemini-3.1-pro",
+      "gpt-4o",
+      "gpt-5-mini",
+      "gpt-5-nano",
+      "gpt-5.4",
+      "kimi-k2.5",
+      "mistral-large",
+      "o4-mini"
+    ],
+    "topics": 107,
+    "file_size_kb": 3958.0
+  },
+  "credibility": {
+    "records": 2662,
+    "pair_ids": 107,
+    "models": 14,
+    "model_list": [
+      "claude-3-7-sonnet",
+      "claude-haiku-4-5",
+      "claude-sonnet-4-5",
+      "claude-sonnet-4-6",
+      "gemini-2.5-pro",
+      "gemini-3-flash",
+      "gemini-3.1-pro",
+      "gpt-4o",
+      "gpt-5-mini",
+      "gpt-5-nano",
+      "gpt-5.4",
+      "kimi-k2.5",
+      "mistral-large",
+      "o4-mini"
+    ],
+    "topics": 107,
+    "file_size_kb": 3821.0
+  },
+  "deception": {
+    "records": 2674,
+    "pair_ids": 107,
+    "models": 14,
+    "model_list": [
+      "claude-3-7-sonnet",
+      "claude-haiku-4-5",
+      "claude-sonnet-4-5",
+      "claude-sonnet-4-6",
+      "gemini-2.5-pro",
+      "gemini-3-flash",
+      "gemini-3.1-pro",
+      "gpt-4o",
+      "gpt-5-mini",
+      "gpt-5-nano",
+      "gpt-5.4",
+      "kimi-k2.5",
+      "mistral-large",
+      "o4-mini"
+    ],
+    "topics": 107,
+    "file_size_kb": 3609.0
+  },
+  "exfiltration": {
+    "records": 1924,
+    "pair_ids": 107,
+    "models": 14,
+    "model_list": [
+      "claude-3-7-sonnet",
+      "claude-haiku-4-5",
+      "claude-sonnet-4-5",
+      "claude-sonnet-4-6",
+      "gemini-2.5-pro",
+      "gemini-3-flash",
+      "gemini-3.1-pro",
+      "gpt-4o",
+      "gpt-5-mini",
+      "gpt-5-nano",
+      "gpt-5.4",
+      "kimi-k2.5",
+      "mistral-large",
+      "o4-mini"
+    ],
+    "topics": 107,
+    "file_size_kb": 4222.0
   },
   "formality": {
-    "records": 2770,
+    "records": 2610,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -180,11 +180,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 161,
-    "file_size_kb": 3903.0
+    "topics": 107,
+    "file_size_kb": 3690.0
   },
   "moral_valence": {
-    "records": 2820,
+    "records": 2624,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -203,11 +203,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 165,
-    "file_size_kb": 4186.0
+    "topics": 107,
+    "file_size_kb": 3916.0
   },
   "negation": {
-    "records": 2644,
+    "records": 2514,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -226,8 +226,8 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 150,
-    "file_size_kb": 3726.0
+    "topics": 107,
+    "file_size_kb": 3573.0
   },
   "obfuscation": {
     "records": 446,
@@ -253,7 +253,7 @@
     "file_size_kb": 583.0
   },
   "plurality": {
-    "records": 2842,
+    "records": 2692,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -272,11 +272,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 157,
-    "file_size_kb": 4155.0
+    "topics": 107,
+    "file_size_kb": 3952.0
   },
   "sarcasm": {
-    "records": 2806,
+    "records": 2666,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -295,8 +295,8 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 154,
-    "file_size_kb": 3788.0
+    "topics": 107,
+    "file_size_kb": 3625.0
   },
   "sentiment": {
     "records": 2884,
@@ -322,7 +322,7 @@
     "file_size_kb": 4022.0
   },
   "specificity": {
-    "records": 2778,
+    "records": 2610,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -341,11 +341,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 167,
-    "file_size_kb": 3727.0
+    "topics": 107,
+    "file_size_kb": 3541.0
   },
   "temporal_order": {
-    "records": 2858,
+    "records": 2690,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -364,11 +364,11 @@
       "mistral-large",
       "o4-mini"
     ],
-    "topics": 161,
-    "file_size_kb": 4050.0
+    "topics": 107,
+    "file_size_kb": 3843.0
   },
   "threat_severity": {
-    "records": 1700,
+    "records": 1694,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -388,10 +388,10 @@
       "o4-mini"
     ],
     "topics": 107,
-    "file_size_kb": 3646.0
+    "file_size_kb": 3638.0
   },
   "urgency": {
-    "records": 1950,
+    "records": 1914,
     "pair_ids": 107,
     "models": 14,
     "model_list": [
@@ -411,6 +411,6 @@
       "o4-mini"
     ],
     "topics": 107,
-    "file_size_kb": 3474.0
+    "file_size_kb": 3439.0
   }
 }
